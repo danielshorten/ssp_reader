@@ -90,6 +90,10 @@ public:
 					}
 					verse = new char[verse_length];
 					file.read(verse, verse_length);
+					
+					// Don't make use of these yet
+					delete label;
+					delete verse;
 				}
 				
 				/**
