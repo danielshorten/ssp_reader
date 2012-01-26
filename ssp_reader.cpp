@@ -110,9 +110,7 @@ public:
 				else if (buffer[8] == 2) { /* Unknown, empty field */ }
 				
 				else {
-					stringstream ss;
-					ss << "Error reading file";
-					throw IOException(ss.str());
+					throw IOException("Error reading file");
 				}
 			}
 			// cout << "\nEnd of file." << endl;
