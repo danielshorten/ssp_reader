@@ -28,7 +28,7 @@ void SongReader::store_field(char** field, ifstream* file, int field_length_type
 	}
 	
 	delete *field;
-	*field = new char[field_length];
+	*field = new char[field_length + 1]();
 	file->read(*field, field_length);
 	delete buffer;
 }
@@ -124,19 +124,6 @@ void SongReader::read(char* filename) {
 						
 				this->store_field(&black_hole, &file, (int) buffer[8]);
 			}
-						
-			/**
-			 * The 9th byte of these field headers seems to indicate
-			 * whether or not content will follow.  6 means that the next
-			 * byte will indicate the length of the field.  2 is typically
-			 * followed by 0 and an empty field.
-			 */
-			// else if (buffer[8] == 0x06) { /* Unknown field with some content */ 
-			// 	int field_size = (int) buffer[9];
-			// 	// printf("Seeking %d bytes...", field_size);
-			// 	file.seekg(field_size, ios::cur);
-			// }
-			// else if (buffer[8] == 2) { /* Unknown, empty field */ }
 			
 			else {
 				file.close();
@@ -163,8 +150,8 @@ void SongReader::read(string filename) {
 }
 
 /* Getters */
-char* SongReader::getTitle() { return title; }
-char* SongReader::getAuthor() { return author; }
-char* SongReader::getCopyright() { return copyright; }
-char* SongReader::getCcliNum() { return ccli_num; }
-char* SongReader::getKeys() { return keys; }
+char* SongReader::get_title() { return title; }
+char* SongReader::get_author() { return author; }
+char* SongReader::get_copyright() { return copyright; }
+char* SongReader::get_ccli_num() { return ccli_num; }
+char* SongReader::get_keys() { return keys; }

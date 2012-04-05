@@ -22,10 +22,10 @@ int main(int argc, char* argv[]) {
 		sr.read(argv[1]);
 	}
 	catch (IOException e) {
-		cout << e.getMessage() << endl;
+		cout << e.get_message() << endl;
 	}
 	
 	printf("Title: %s\nAuthor: %s\nCopyright: %s\nCCLI #: %s\nKeys: %s\n",
-		sr.getTitle(), sr.getAuthor(), sr.getCopyright(), sr.getCcliNum(), sr.getKeys());
+		sr.get_title(), sr.get_author(), sr.get_copyright(), sr.get_ccli_num(), sr.get_keys());
 	return 0;
 }

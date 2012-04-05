@@ -20,10 +20,10 @@ public:
 	void read(char* filename);
 	void read(string filename);
 
-	char* getTitle();
-	char* getAuthor();
-	char* getCopyright();
-	char* getCcliNum();
-	char* getKeys();
+	char* get_title();
+	char* get_author();
+	char* get_copyright();
+	char* get_ccli_num();
+	char* get_keys();
 };
 #endif

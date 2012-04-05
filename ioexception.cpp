@@ -2,4 +2,4 @@
 
 IOException::IOException() { message = ""; }
 IOException::IOException(string s) { message = s; }
-string IOException::getMessage() { return message; }
+string IOException::get_message() { return message; }

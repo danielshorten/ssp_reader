@@ -11,6 +11,6 @@ private:
 public:
 	IOException();
 	IOException(string s);
-	string getMessage();
+	string get_message();
 };
 #endif
