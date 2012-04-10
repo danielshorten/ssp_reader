@@ -1,3 +1,10 @@
+/**
+ * SongReader Class
+ *
+ * Class for reading a SongShowPlus song file and storing the data from the
+ * song file fields.
+ */
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -42,6 +49,7 @@ SongReader::SongReader() {
 	keys = new char[1];
 	black_hole = new char[1]; // use to read unknown fields
 }
+
 
 void SongReader::read(char* filename) {
 	ifstream::pos_type size;

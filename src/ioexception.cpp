@@ -1,3 +1,8 @@
+/**
+ * IOException
+ *
+ * Simple exception class for IO exceptions.
+ */
 #include "ioexception.h"
 
 IOException::IOException() { message = ""; }

@@ -1,3 +1,9 @@
+/**
+ * songreader.h
+ *
+ * Header for SongReader class (songreader.cpp)
+ */
+
 #ifndef _songreader_h_included_
 #define _songreader_h_included_
 #include <fstream>

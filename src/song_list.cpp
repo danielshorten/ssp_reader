@@ -1,3 +1,10 @@
+/**
+ * song_list.cpp
+ *
+ * Command-line utility for generating a list (CSV format) of songs from a
+ * directory of SongShowPlus files.
+ */
+
 #include <dirent.h>
 #include <iostream>
 #include <sstream>

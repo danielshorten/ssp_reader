@@ -1,0 +1,5 @@
+Preliminary C++ reader for SongShowPlus song files, plus a command-line
+utility for generating a song list in CSV format.
+
+src/ Contains source files
+bin/ Contains a WIN32 binary for song_list.cpp and batch file example.  The binary requires the Microsoft Visual C++ 2010 Redistributable Package.
